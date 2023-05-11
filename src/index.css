@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border: rgb(200, 200, 200);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: aliceblue;
+  font-size: 16px;
+  position: relative;
+}
+
+button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.main {
+  max-width: 992px;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rotate {
+  animation: rotate 5s linear infinite;
+}
+
+.input-search {
+  width: 35%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid gainsboro;
+  outline: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.button {
+  color: white;
+  border: 1px solid gainsboro;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.success {
+  background-color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  flex: 1 1 auto;
+}
+
+/* table */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 16px 10px;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  text-align: left;
+}
+
+tr {
+  background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(245, 245, 245);
+}
+
+td {
+  border-top: 1px solid var(--border);
+  padding: 10px;
+  text-align: center;
+}
+
+.table-wrapper {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.warning {
+  background-color: darkgoldenrod;
+}
+
+.high {
+  background-color: red;
+}
+
+.small {
+  background: gray;
+}
+
+.medium {
+  background: lightseagreen;
+}
+
+.level {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.actions {
+  display: flex;
+  column-gap: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  height: 100%;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  z-index: 20;
+  visibility: hidden;
+}
+
+.modal.active {
+  transform: translateX(0%);
+  visibility: visible;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal-form label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.modal-form input {
+  width: 100%;
+}
+
+.modal-form div {
+  margin-bottom: 20px;
+}
+
+.modal-form select {
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+  opacity: 0;
+  inset: 0;
+  z-index: 10;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  color: black;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  scale: 0.9;
+  transition: visibility, scale, opacity 0.3s ease-in-out;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.view.active {
+  opacity: 1;
+  visibility: visible;
+  scale: 1;
+}
+
+.view ul li {
+  margin-bottom: 10px;
+}
+
+.view ul li:last-child {
+  margin: 0;
+}
+
+li {
+  list-style-position: inside;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

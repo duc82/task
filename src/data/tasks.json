@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Học NextJS",
+    "level": "small"
+  },
+  {
+    "id": 2,
+    "name": "Đi học",
+    "level": "medium"
+  },
+  {
+    "id": 3,
+    "name": "Đi ngủ",
+    "level": "high"
+  }
+]
